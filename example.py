@@ -1,6 +1,6 @@
-file = open("example.txt" , "w")
+file = open("example.txt" , "r")
 
-file.write("hello , world")
-file.write("\n")
-file.write("Python is awesome")
+content = file.read(50)
+print(content)
+
 file.close()
