@@ -1,9 +1,7 @@
-def reading_to_file(file_name , prefix):
-    result = []
+def reading_to_file(file_name ):
     with open(file_name , "r") as file:
         for line in file:
-          if line.startswith(prefix):
-            result.append(line.strip())
-    return result
-a = reading_to_file("example.txt" , "Hello")
-print(a)
+          line_content = line.rstrip('\n')# מנקה את השורה מהתו הנסתר  
+          length = len(line_content)
+          print(f"{length}.**{line_content}**")
+reading_to_file("example.txt")
